@@ -1,13 +1,25 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "9434T587C9.com.test.UniversalLinksApp",
-                "paths": [
-                    "*"
-                ]
-            }
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9434T587C9.com.test.UniversalLinksApp",
+        "components": [
+          {
+            "/": "/checkout",
+            "?": {
+              "$web_only": "true"
+            },
+            "exclude": true,
+            "comment": "Exclude only if web_only=true"
+          },
+          {
+            "/": "/product",
+            "exclude": true,
+            "comment": "Exclude all /product paths"
+          }
         ]
-    }
+      }
+    ]
+  }
 }
